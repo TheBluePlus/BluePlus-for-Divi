@@ -1,0 +1,180 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-11-07, 18:09:46
+    Author     : karl_
+*/
+
+#main-content {
+overflow: hidden;
+}
+/* Hides all the items that float over the right margin */
+.diagonal-shadow::before,
+.diagonal-shadow::after {
+position: absolute;
+content:  »;
+pointer-events: none;
+}
+.diagonal-shadow {
+z-index: 1;
+padding-top: 6em;
+background: #70726f;
+}
+.diagonal-shadow::before,
+.diagonal-shadow::after {
+top: 0;
+left: -25%;
+z-index: -1;
+width: 150%;
+height: 75%;
+background: none;
+-webkit-transform: rotate(-2deg);
+transform: rotate(-2deg);
+-webkit-transform-origin: 0 0;
+transform-origin: 0 0;
+}
+.diagonal-shadow::before {
+height: 150px;
+background: #70726f;
+-webkit-transform: rotate(-3deg);
+transform: rotate(-3deg);
+-webkit-transform-origin: 3% 0;
+transform-origin: 3% 0;
+}
+.diagonal-shadow-1::before,
+.diagonal-shadow-1::after {
+position: absolute;
+content:  »;
+pointer-events: none;
+}
+.diagonal-shadow-1 {
+z-index: 1;
+padding-top: 6em;
+background: #32b1ca;
+}
+.diagonal-shadow-1::before,
+.diagonal-shadow-1::after {
+top: 0;
+left: -25%;
+z-index: -1;
+width: 150%;
+height: 75%;
+background: none;
+-webkit-transform: rotate(2deg);
+transform: rotate(2deg);
+-webkit-transform-origin: 0 0;
+transform-origin: 0 0;
+}
+.diagonal-shadow-1::before {
+height: 150px;
+background: #32b1ca;
+-webkit-transform: rotate(3deg);
+transform: rotate(3deg);
+-webkit-transform-origin: 90% 0;
+transform-origin: 90% 0;
+}
+.diagonal-shadow-2::before,
+.diagonal-shadow-2::after {
+position: absolute;
+content:  »;
+pointer-events: none;
+}
+.diagonal-shadow-2 {
+z-index: 1;
+padding-top: 6em;
+background: #ffffff;
+}
+.diagonal-shadow-2::before,
+.diagonal-shadow-2::after {
+top: 0;
+left: -25%;
+z-index: -1;
+width: 150%;
+height: 75%;
+background: none;
+-webkit-transform: rotate(-2deg);
+transform: rotate(-2deg);
+-webkit-transform-origin: 0 0;
+transform-origin: 0 0;
+}
+.diagonal-shadow-2::before {
+height: 150px;
+background: #ffffff;
+-webkit-transform: rotate(-3deg);
+transform: rotate(-3deg);
+-webkit-transform-origin: 3% 0;
+transform-origin: 3% 0;
+}
+.diagonal-shadow-3::before,
+.diagonal-shadow-3::after {
+position: absolute;
+content:  »;
+pointer-events: none;
+}
+.diagonal-shadow-3 {
+z-index: 1;
+padding-top: 6em;
+background: #a7c13f;
+}
+.diagonal-shadow-3::before,
+.diagonal-shadow-3::after {
+top: 0;
+left: -25%;
+z-index: -1;
+width: 150%;
+height: 75%;
+background: none;
+-webkit-transform: rotate(-2deg);
+transform: rotate(-2deg);
+-webkit-transform-origin: 0 0;
+transform-origin: 0 0;
+}
+.diagonal-shadow-3::before {
+height: 150px;
+background: #a7c13f;
+-webkit-transform: rotate(-3deg);
+transform: rotate(-3deg);
+-webkit-transform-origin: 3% 0;
+transform-origin: 3% 0;
+}
+.et_pb_blurb_content {
+max-width: none !important;
+}
+.et_pb_blurb_position_left .et_pb_main_blurb_image,
+.et_pb_blurb_position_right .et_pb_main_blurb_image {
+width: 150px !important;
+}
+body #page-container .et_pb_button_0.grey {
+background: #016990 none repeat scroll 0 0 !important;
+border-color: #016990 !important;
+color: #ffffff !important;
+font-family: « Lato », Helvetica, Arial, Lucida, sans-serif !important;
+letter-spacing: 0 !important;
+padding-left: 0.7em;
+padding-right: 2em;
+}
+.et_pb_button_0.grey:hover {
+color: #016990 !important;
+background: #ffffff !important;
+border-color: #016990 !important;
+}
+a {
+color: #016990;
+}
+@media screen and (max-width: 768px) {
+.et_pb_blurb_position_left .et_pb_main_blurb_image,
+.et_pb_blurb_position_right .et_pb_main_blurb_image {
+width: 100% !important;
+}
+.et_pb_blurb_position_left .et_pb_blurb_container {
+width: 100% !important;
+}
+.et_pb_blurb_position_left .et_pb_blurb_container,
+.et_pb_blurb_position_right .et_pb_blurb_container {
+display: block !important;
+margin-top: 25px !important;
+}
+}

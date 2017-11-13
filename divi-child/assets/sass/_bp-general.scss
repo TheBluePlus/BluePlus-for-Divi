@@ -1,0 +1,417 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-10-25, 15:38:19
+    Author     : Karl
+*/
+
+body {
+    font-size: $body_font_size;
+}
+
+*:focus {
+    outline: $focus_element_outline !important;
+}
+
+/* Header & Menu principal
+-------------------------------------------------------- */
+
+@if not($vertical_menu_bar) { // This styles will be applied ONLY II you set $vertical_menu_bar to FALSE. 
+                              
+                              header#main-header {
+                                  @if $bg_menu_bar {
+                                      &:not(.et-fixed-header) {
+                                          background: $bg_menu_bar;
+                                      }
+                                  }
+                                  @if $bg_menu_bar_fixed  { 
+                                      &.et-fixed-header { 
+                                          @include __ifuse("background",$bg_menu_bar_fixed);
+                                          @if $bg_menu_bar_fixed {
+                                              background-color: $bg_menu_bar_fixed;
+                                          }
+                                      }
+                                  }
+                                  #top-menu li {
+                                      font: {
+                                          family: $font_menu_bar;
+                                          size: 1rem;
+                                      }
+                                  }    
+                                  @if $logo_extend {
+                                      #logo {
+                                          @extend #{$logo_extend};
+                                      }
+                                  }
+                              }
+                              
+}                               //--------------------------------------------
+
+
+@if $vertical_menu_bar {  // This styles will be applied ONLY II you set $vertical_menu_bar to TRUE. 
+                          .et_vertical_nav {
+                              header#main-header {
+                                  background: $bg_menu_bar;
+                                  
+                                  div#et-top-navigation {
+                                      nav#top-menu-nav {
+                                          
+                                          #top-menu>li>a {
+                                              @include __ifuse("padding", $menu_link_padding);                                              
+                                              @include __ifuse("margin", $menu_link_margin);                                              
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+}                               //--------------------------------------------
+
+.et_header_style_split .centered-inline-logo-wrap #logo {
+    @media screen and (min-width: 981px) {
+        height: 45px;
+        max-height: 45px;
+    }
+}
+
+body:not(.template-slider) #Header {
+    min-height: auto;
+}
+
+/* General
+-------------------------------------------------------- */
+
+.story_box .desc_wrapper h3 {
+    margin-top: 0;
+}
+
+.et_pb_fullwidth_header_0.et_pb_fullwidth_header .et_pb_fullwidth_header_scroll a .et-pb-icon {
+    @extend .drop-shadow-depth-2;
+}
+
+.caps {
+    text-transform: uppercase;
+}
+
+.tcenter {
+    text-align: center !important;
+}
+
+.no-margin {
+    margin:0px;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0px;
+}
+
+.border5 {
+    border: solid;
+    border-width: 5px;
+    &.no-border-top {
+        border-top: none;
+    }
+    &.border-themecolor-main {
+        border-color: $themecolor_main;
+    }
+    &.border-themecolor-sec {
+        border-color: $themecolor_2;
+    }
+}
+
+.inner-border {
+    box-sizing: border-box;
+}
+
+.top-radius {
+    border-radius: $top_radius;
+}
+
+.max-width-667 {
+    max-width: 667px;
+    margin: auto;
+}
+
+.section-max-width-1920 div.mcb-section-inner {
+    max-width: 1920px;
+    margin: auto;
+}
+
+.separateur-grey {
+    height: 1px;
+    background-color: $color_grey;
+}
+
+.no-float {
+    float: none;
+}
+
+hr {
+    &.separation-{
+        &theme {
+            background-color: $themecolor_main;
+            height: $separation_height;
+        }
+        &theme-sec {
+            background-color: $themecolor_2;
+            height: $separation_height;
+        }
+        &black {
+            background-color: $color_black;
+            height: $separation_height;
+        }
+    }
+}
+
+a {
+    @include transition($transition)
+}
+
+/* Styles icones
+-------------------------------------------------------- */
+.blurb-imgsize div.et_pb_main_blurb_image img {
+    max-width: $icon_size;
+    height: $icon_size;
+}
+
+.icon-title-service {
+    h4 {
+        font-family: $font_title;
+    }
+}
+
+.column_list {
+    &.iconlist-accueil {
+        h3,h4 {
+            color: $color_white;
+        }
+    }
+}
+
+.list_item .list_left {
+    margin-right: 15px;
+}
+
+/* PAGES SECTIONS
+-------------------------------------------------------- */
+
+
+.wrap-inner-{
+    &max-width-667 div.mcb-wrap-inner {
+        max-width: 667px;
+        margin: auto;
+    }
+    &med-shadow div.mcb-wrap-inner {
+        display: table;
+        @include box-shadow("0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3)");
+    }
+    &bg-themecolor-main div.mcb-wrap-inner {background-color: $themecolor_main !important;}
+    &bg-themecolor-sec div.mcb-wrap-inner {background-color: $themecolor_2 !important;}
+}
+
+.mw1070 {
+    max-width: 1070px;
+    margin: auto;
+}
+
+.gradient-cta {
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 10.29%, #dacfaf 10.30%, #dacfaf 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 10.29%, #dacfaf 10.30%, #dacfaf 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 10.29%, #dacfaf 10.30%, #dacfaf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dacfaf',GradientType=0 ); /* IE6-9 */
+}
+
+
+/* BOUTONS
+-------------------------------------------------------- */
+
+.btn-all {
+    border: none;
+    border-radius: $button_radius;
+    font: {
+        family: $button_font;
+        weight: 400;
+        size: 1.2rem;
+    }
+    &:hover {
+        border: none !important;
+    }
+}
+
+a.btn-1 {
+    background-color: $themecolor_main;
+    @extend .btn-all;
+    @include transition($transition);
+
+    @if (lightness($themecolor_main) > 50) {
+        color: $color_dark_grey !important;
+    }
+    @else {
+        color: $color_white !important;
+    }
+
+    &:hover {
+        background-color: $themecolor_2 !important;
+
+        @if (lightness($themecolor_2) > 50) {
+            color: $color_black !important;
+        }
+        @else {
+            color: $color_white !important;
+        }
+    }
+}
+
+a.btn-2 {
+    background-color: $themecolor_2 !important;
+    @extend .btn-all;
+
+    @include transition($transition);
+    @if (lightness($themecolor_2) > 50) {
+        color: $color_black !important;
+    }
+    @else {
+        color: $color_white !important;
+    }
+
+    &:hover {
+        background-color: $themecolor_main !important;
+        @if (lightness($themecolor_main) > 50) {
+            color: $color_dark_grey !important;
+        }
+        @else {
+            color: $color_white !important;
+        }
+    }
+}
+
+a.btn-3 {
+    background-color: $themecolor_2 !important;
+    @extend .btn-all;
+
+    @include transition($transition);
+
+    @if (lightness($themecolor_2) > 50) {
+        color: $color_black !important;
+    }
+    @else {
+        color: $color_white !important;
+    }
+
+    &:hover {
+        background-color: $color_white !important;
+        color:#000 !important;
+    }
+}
+
+.et_pb_fullwidth_header {
+    &a.btn-1 a.et_pb_button {
+        @extend .btn-1;
+    }
+    &a.btn-2 a.et_pb_button {
+        @extend .btn-2;
+    }
+    &a.btn-3 a.et_pb_button {
+        @extend .btn-3;
+    }
+}
+
+
+/* Footer styles
+-------------------------------------------------------- */
+
+.logo-footer img {
+    width: 200px;
+    display: block;
+}
+
+.list-footer li {
+    list-style: none;
+}
+
+.footer {
+    a {
+        color: $themecolor_main;
+    }
+    .footer-title {
+        border-bottom: solid 2px $themecolor_main;
+        padding: 4px;
+        margin-top: 50px;
+        line-height: 1.75em;
+    }
+}
+
+
+.menu-footer {
+    padding: 0 0 18px !important;
+    li {
+        display: inline-block;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+
+
+
+#Footer {
+    max-width: $footer_width;
+    margin: auto;
+
+    .section_wrapper, .container {
+        max-width: none;
+    }
+
+    @media screen and (max-width: 767px) {
+        .f-left, .f-center, .f-right {        
+            text-align:center;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        .f-left {
+            padding: 0 10% 0 0;
+            text-align:left;
+        }
+        .f-center {
+            padding: 0 5% 0 5%;
+            text-align:center;
+        }
+        .f-right {
+            padding: 0 0 0 10%;
+            text-align:right;
+        }
+    }
+
+
+
+    ul#menu-footer-menu {
+        text-align: center;
+        list-style: none outside;
+
+        li {
+            display: inline-block;
+            margin: 0 15px;
+            font-family: $font_title;
+            font-size: 18px;
+        }
+    }
+
+    .footer_copy {
+        background-color: $bgcolor_footer_copy;
+
+        div.copyright {
+            color: $color_footer_copy;
+            padding: 25px 0 0;
+            border-top: solid 1px;
+        }
+    }
+
+    .column.one-fourth {
+        aside{
+            padding-left: 20%;
+        }
+    }
+}

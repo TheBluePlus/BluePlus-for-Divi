@@ -1,0 +1,103 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-11-10, 20:55:48
+    Author     : karl_
+*/
+
+/* General Variables
+-------------------------------------------------------- */
+
+$themecolor_main:           #0d47a1;
+$themecolor_2:              #4f83cc;
+$color_black:               #000a12;
+$color_white:               #ffffff;
+$color_dark_blue:           #002f6c;
+$color_light_blue:          #5eb8ff;
+$color_grey:                #607d8b;
+$color_dark_grey:           #102027;
+$color_light_grey:          #c1d5e0;
+
+//Do not forget to integrate your color variables to the $color map !!
+$colors: (
+    "theme-1":                $themecolor_main,
+    "theme-2":                $themecolor_2,
+    "black":                  $color_black,
+    "white":                  $color_white,
+    "dark-blue":              $color_dark_blue,
+    "light-blue":             $color_light_blue,
+    "grey":                   $color_grey,
+    "dark-grey":              $color_dark_grey,
+    "light-grey":             $color_light_grey,
+);
+
+
+
+/*FONTS */
+$font:                      "Overlock", Arial, Helvetica, sans-serif;
+$font_title:                "Nova Round", Arial, Helvetica, sans-serif;
+$font_subtitle:             "Nova Round", Arial, Helvetica, sans-serif;
+$button_font:               "Overlock", Arial, Helvetica, sans-serif;
+$body_font_size:            16px;
+
+
+/* Config Variables
+-------------------------------------------------------- */
+
+$body_bg:               $color_white;
+$footer_bg:             $color_dark_blue;
+$focus_element_outline:  2px solid lighten($themecolor_main, 35%) ;
+
+
+$cards_radius:          7px;
+$form_input_radius:     7px;
+
+//-- Navigation bar --
+$vertical_menu_bar:             true; // {Boolean}
+$logo_extend:                   false; // {".CLASS_NAME", "#ID_NAME", "%PLACEHOLDER_NAME" OR false} Do not forgret the character "." "#" or "%"...   &&   E.d.: If false, no class will be applied...   E.d.2: You can extend more than one selector, you only have to separate by a comma !!
+
+$bg_menu_bar:                   $color_dark_grey; // {value OR false} false= Do not override Divi Theme Style
+$color_menu_link:               $color_white; // {Color}
+$font_menu_bar:                 $font_title; 
+$bg_menu_bar_fixed:             true; // {value OR false} false= Same as the $bg_menu_bar       &&      E.d.: If the vertical_bar is = true, that style will not be applied
+
+$menu_link_padding:             0 0 19px 0; // {Sizes OR false} false= Do not ovverride     E.d.: Take a note; 0 is not equal to false with SASS
+$menu_link_margin:              0;          //{Sizes OR false} fasle= Do not ovverride      E.d.: Take a note; 0 is not equal to false with SASS
+
+$color_footer_copy:           $color_grey;
+$bgcolor_footer_copy:         $color_white;
+$color_link_copy:             $themecolor_main;
+$color_link_hover:            $themecolor_2;
+
+//-- Buttons --
+$button_radius:               8px;
+$button_color_main:           $color_white;
+$button_color_sec:            $color_grey;
+$button_color_white:          $themecolor_main;
+$button_bgcolor_main_hover:   $color_grey;
+$button_color_sec_hover:      $color_white;
+$button_bgcolor_sec_hover:    $color_grey;
+$button_bgcolor_white_hover:  $themecolor_main;
+
+
+$button_font:                 $font_title;
+$button_font_size_1:          1em;
+$button_font_size_2:          1.22em;
+$button_font_size_3:          1.39em;
+$button_font_size_4:          1.56em;
+$border_btn:                none;
+$top_radius:                10px 10px 0 0;
+
+$separation_height:         3px;
+
+$color_link: $themecolor_main;
+$color_link_hover: $color_grey;
+$transition:            ease-in 200ms;
+
+$icon_size:             95px;
+
+$site_width:            1200px;
+$footer_width:          1070px;

@@ -1,0 +1,113 @@
+/*# sourceMappingURL=bpstyle.css.map */
+
+/*   BlueBE + for BeTheme   */
+/* 
+    Created on : 2017-07-31, 23:35:17
+    Author     : Karl Rondeau
+*/
+
+//@import "BEreset";
+
+@import "__bp_variables";
+@import "__bp_dp_variables";  // Contain all the variables for the Blue+ Divi Child-Theme Plugins...
+
+/* Mixins
+-------------------------------------------------------- */
+@import "misc/mixins/bpcss3";
+@import "misc/mixins/bpm-diago";
+@import "misc/mixins/bp-gen-mixins";
+
+/* Colors
+-------------------------------------------------------- */
+@each $name, $value in $colors {
+    .color-#{$name} {
+        color: $value !important;
+    }
+    .bgcolor-#{$name} {
+        background-color: $value !important;
+    }
+}
+
+/*.color-link { color: $color_link !important; }
+.color-link-hover { color: $color_link_hover !important; }
+.color-black { color: $color_black !important; }
+.color-white { color: $color_white !important; }
+.color-grey { color: $color_grey !important; }
+.color-light-grey { color: $color_light_grey !important; }
+.color-dark-grey { color: $color_dark_grey !important; }
+.color-theme { color: $themecolor_main !important; }
+.color-theme-sec { color: $themecolor_2 !important; }
+
+.bg-themecolor-main {background-color: $themecolor_main;}
+.bg-themecolor-sec {background-color: $themecolor_2;}
+.bg-link { background-color: $color_link; }
+.bg-link-hover { background-color: $color_link_hover; }
+.bg-black { background-color: $color_black; }
+.bg-white { background-color: #FFF; }
+.bg-grey { background-color: $color_grey; }
+.bg-light-grey { background-color: $color_light_grey; }*/
+
+.font-regular { font-family: $font}
+.font-title { font-family: $font_title}
+
+
+/* i-index
+-------------------------------------------------------- */
+.z2{z-index: 2;}
+.z3{z-index: 3;}
+.z4{z-index: 4;}
+.z5{z-index: 5;}
+.z6{z-index: 6;}
+
+/* Fonts styles
+-------------------------------------------------------- */
+html { font-family: $font; }
+
+//Font Weight
+.fw100 {font-weight: 100;}//-- Thin
+.fw200 {font-weight: 200;}//-- Extra-Light
+.fw300 {font-weight: 300;}//-- Light
+.fw400 {font-weight: 400;}//-- Regular
+.fw500 {font-weight: 500;}//-- Medium
+.fw600 {font-weight: 600;}//-- Semi-Bold
+.fw700 {font-weight: 700;}//-- Bold
+.fw800 {font-weight: 800;}//-- Extra-Bold
+.fw900 {font-weight: 900;}//-- Black
+
+/* Display Flex and others
+-------------------------------------------------------- */
+.dblock {display: block !important;}
+.dinblock {display: inline-block !important;}
+.dtable {display: table !important;}
+.dtablecell {display: table-cell !important;}
+
+//--Flex
+.dflex {@include display-flex(true);}
+.flexcol {@include flex-direction('column');}
+.flexrow {@include flex-direction('row');}
+.justify-end {@include justify-content('flex-end')}
+.justify-center {@include justify-content('center')}
+.img-mcenter img {margin-left:auto;margin-right: auto;}
+.flex-wrap {@include flex-wrap;}
+.flex-wrap-reverse {@include flex-wrap('wrap-reverse');}
+.wfit-content {width: fit-content;}
+
+
+
+/* IMPORT OTHER FILES
+-------------------------------------------------------- */
+//@import "_bp-industry-layout.css";
+@import "misc/bp-shadow";
+
+//Plugins, you can comment what's you don't need!
+@import "plugins/bp-dp_sections-diago";
+@import "plugins/menu/bp-dp_svg-icon-menu";
+@import "plugins/menu/bp-dp_flex-menu"; // -- For make the Divi Menu use Flex...        E.d.: WARNING: This can break other plugins or things going in the navigation bar. Enable only if you know what's you doing
+@import "plugins/menu/bp-dp_logo-section-bg"; // -- Make the background under the logo section of the navigation bar different of the rest of the bar!
+
+@import "bp-general";
+@import "bp-gform", "bpresponsive";
+@import "bp-blueplusstyles"
+/*@import "_bp-sablesuprenant";*/
+//@import "bpresponsive.scss"; //RESPONSIVE
+//@import "bpm-form.scss";    //Material style form

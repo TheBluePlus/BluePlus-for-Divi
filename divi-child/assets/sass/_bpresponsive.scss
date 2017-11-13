@@ -1,0 +1,92 @@
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-08-05, 13:46:37
+    Author     : karl_
+*/
+
+.title1 {
+    font: {
+        size: 1.93rem; // Phone
+        weight: 500;
+        family: $font_title;
+    }
+    line-height: 1.1em;
+    @media screen and (min-width: 768px) and (max-width: 980px) {
+        font-size: 3.75rem; // Tablet
+    }
+    @media screen and (min-width: 981px) {
+        font-size: 4.75rem; // Desktop - Laptop
+    }
+}
+
+.title2 {
+    font: {
+        size: 1.625rem; // Phone
+        family: $font_subtitle;
+        weight: 300;
+    }
+    line-height: 1.25em;
+    @media screen and (min-width: 768px) and (max-width: 980px) {
+        font-size: 2.0rem; // Tablet
+    }
+    @media screen and (min-width: 981px) {
+        font-size: 2.5rem; // Desktop - Laptop
+    }
+}
+
+.title2-big {
+    font: {
+        size: 1.625rem; // Phone
+        family: $font_subtitle;
+        weight: 300;
+    }
+    line-height: 1.25em;
+    @media screen and (min-width: 768px) and (max-width: 980px) {
+        font-size: 2rem; // Tablet
+    }
+    @media screen and (min-width: 981px) {
+        font-size: 3.125rem; // Desktop - Laptop
+    }
+}
+
+.title2-normal {
+    @extend .title2;
+    font-family: $font;
+}
+
+.title2-small {
+    font-size: 1.313rem; // Phone
+    line-height: 1.1em;
+    font-family: $font_title;
+    @media screen and (min-width: 768px) and (max-width: 980px) {
+        font-size: 1.5rem; // Tablet
+    }
+    @media screen and (min-width: 981px) {
+        font-size: 1.625rem; // Desktop - Laptop
+    }
+}
+
+.title3 {
+    font: {
+        family: $font_title;
+        size: 1.25rem; //Phone
+        weight: 500;
+    }
+    @media screen and (min-width: 768px) and (max-width: 980px) {
+        font-size: 1.35rem; // Tablet
+    }
+    @media screen and (min-width: 981px) {
+        font-size: 1.5rem; // Desktop - Laptop
+    }
+}
+
+@media screen and (min-width: 981px) {
+    .max50-lg {
+        max-width: 50%;
+    }
+}

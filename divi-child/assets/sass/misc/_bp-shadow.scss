@@ -1,0 +1,53 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-11-07, 23:28:29
+    Author     : karl_
+*/
+
+/* SHADOWS
+-------------------------------------------------------- */
+
+.big-shadow {
+    @include box-shadow("0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.3)");
+}
+
+.med-shadow {
+    @include box-shadow("0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3)");
+}
+
+
+.shadow-depth-1 {
+    @include box-shadow("0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2)");
+}
+.shadow-depth-2 {
+    @include box-shadow("0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3)");
+}
+.shadow-depth-3 {
+    @include box-shadow("0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3)");
+}
+.shadow-depth-4 {
+    @include box-shadow("0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.3)");
+}
+.shadow-depth-5 {
+    @include box-shadow ("0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3)");
+}
+
+.title-shadow {
+    @include text-shadow('2px 2px 7px rgba(0, 0, 0, 0.5)');
+}
+
+.drop-shadow-depth-2 {
+    @include multi-filter('drop-shadow(0 4px 5px rgba(0,0,0,0.14)) drop-shadow(0 1px 10px rgba(0,0,0,0.12)) drop-shadow(0 2px 4px rgba(0,0,0,0.3))');
+}
+
+.nav-shadow {
+    @include box-shadow ("4px 3px 6px 0 rgba(0,0,0,0.3), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2)", true);
+}
+
+.et_vertical_nav #page-container header#main-header {
+    @extend .nav-shadow;
+}

@@ -1,0 +1,56 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 19-Sep-2017, 9:07:59 AM
+    Author     : Gery
+*/
+/*.title1 {
+    font-family: $font_title;
+}*/
+
+/*h2 header*/
+/*.et_pb_fullwidth_header_0.et_pb_fullwidth_header .et_pb_fullwidth_header_subhead {
+    width: 650px;
+    @media screen and (max-width: 980px) {
+        width: 350px;
+    }
+    @media screen and (max-width: 767px) {
+        width: 250px;
+    }
+}*/
+
+.h3-myslider {
+    width: 550px;
+    margin-top: 15px;
+}
+.content {
+    font-family: $font;
+    color: $color_black;
+}
+.button-slider {
+    display: inline-block;   
+    padding: 10px 22px;
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-family: $font_title;
+}
+#main-footer {
+    background: $themecolor_main;
+}
+
+#our-quality .et_pb_blurb h4 {
+    @extend .title2-small;
+    text-transform: uppercase;
+    color: $themecolor_2;
+}
+
+.content-footer {
+    font-family: $font;
+    color: $color_black;
+    font-size: 1.4em;
+}

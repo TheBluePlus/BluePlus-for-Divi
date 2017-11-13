@@ -1,0 +1,38 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-11-10, 20:58:04
+    Author     : karl_
+*/
+
+
+
+
+
+/*  -- Plugin: DP_LOGO-SECTION-BG
+-------------------------------------------------------- */
+$_ENABLE_bp-dp_logo-section-bg:     true;
+$__dp_padding_before_logo:          0px;
+$__dp_magin_logo-menu_container:    0px;
+$__dp_logo_padding:                 40px 15px 40px 15px; // {Sizes OR false}    E.d.: Put false if you do not want to override the values of divi where less powerful definition. False is not necessarily equal to 0     E.d.2: Take a note; 0 is not equal to false, so you can use 0 for make a ZERO padding!!
+$__dp_logo_margin:                  false; // {Sizes OR false}    E.d.: Put false if you do not want to override the values of divi where less powerful definition. False is not necessarily equal to 0     E.d.2: Take a note; 0 is not equal to false, so you can use 0 for make a ZERO Margin!!
+$__dp_logo_extend:                  ".shadow-depth-5"; // {".CLASS_NAME", "#ID_NAME", "%PLACEHOLDER_NAME" OR FALSE} Do not forgret the character "." "#" or "%"...   &&   E.d.: If false, no class will be applied...   E.d.2: You can extend more than one selector, you only have to separate by a comma !!
+$__dp_logo_background:              rgba(0,0,0,.5); // {Background_value OR false}    E.d.: Put false if you do not want to override the values of divi where less powerful definition. False is not necessarily equal to 0
+
+
+
+/*  -- Plugin: DP_FLEX-MENU
+-------------------------------------------------------- */
+$_ENABLE_dp_flex-menu:          false;
+
+
+/*  -- Plugin: DP_SERVICES-CARDS
+-------------------------------------------------------- */
+$_ENABLE_bp-dp_services-cards_style1:   true;
+$__dp_hover-backgrouund: (
+    1: rgba($themecolor_main, .8),
+    2: rgba($themecolor_2, .8),
+)            

@@ -1,0 +1,68 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-11-07, 18:33:35
+    Author     : karl_
+*/
+
+$angle-asc:             -3;//Ne pas mettre le symbole negatif...
+$height-asc:            6vw;
+$angle-desc:            3;//Ne pas mettre le symbole negatif...
+$height-desc:           6vw;
+
+
+%diag-gen {
+    z-index: 1;
+    padding-top: 6em;
+    
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: -25%;
+        z-index: -1;
+        width: 150%;
+        pointer-events: none;
+    }
+}
+
+.diag-asc {
+    @include h-diago-before($angle-asc, $height-asc,$color_white);
+}
+
+.diag-desc {
+    @include h-diago-before($angle-desc, $height-desc,$color_white);
+}
+.diag-color-black {
+    &::before{
+        background-color: $color_black;
+    }
+    background-color: $color_black;
+}
+.diag-color-theme {
+    &::before{
+        background-color: $themecolor_main;
+    }
+    background-color: $themecolor_main;
+}
+.diag-color-theme-sec {
+    &::before{
+        background-color: $themecolor_2;
+    }
+    background-color: $themecolor_2;
+}
+.diag-color-grey {
+    &::before{
+        background-color: $color_grey;
+    }
+    background-color: $color_grey;
+}
+.diag-color-light-grey {
+    &::before{
+        background-color: $color_light_grey;
+    }
+    background-color: $color_light_grey;
+}

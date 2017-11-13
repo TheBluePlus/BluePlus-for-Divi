@@ -1,0 +1,33 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-11-10, 21:46:18
+    Author     : karl_
+*/
+
+
+
+@if $_ENABLE_bp-dp_logo-section-bg {
+    
+    @if $vertical_menu_bar {
+        body.et_vertical_nav  div#page-container header#main-header {
+            padding-top: $__dp_padding_before_logo;
+            
+            div.container {
+                margin: $__dp_magin_logo-menu_container;
+                div.logo_container {
+                    img#logo {
+                        @include __ifuse("padding", $__dp_logo_padding);
+                        @include __ifuse("margin", $__dp_logo_margin);
+                        @include __ifuse("background", $__dp_logo_background);
+                        @include __ifextend($__dp_logo_extend);
+                    }
+                }
+            }
+        }
+    }
+}
+

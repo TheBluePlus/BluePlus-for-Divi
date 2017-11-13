@@ -1,0 +1,68 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-11-11, 15:26:49
+    Author     : karl_
+*/
+
+///------ TYPE ------- VARIABLE ------------ EXAMPLE ------------- NOTES--------------
+/// @param {*}          $property       |   padding           - Property CSS
+/// @param {*}          $variable       |   $padding_top      - The variable you whant to verify before applly
+/// @param {*}          $value          |   $variable         - The value to apply if the verification of $variable return TRUE
+/// @param {*}          $reverse        |   false             - Give you possibility to reverse verification. So the propriety will be add only if the verification of $variable return FALSE
+/// @param {Boolean}    $important      |   false             - If you whant to use !important -- Is never recommanded, but some-time you can needed!
+
+@mixin __ifuse($propriety,$variable,$value:$variable,$reverse:false,$important:false) {
+    @if ($value and $variable) and not($reverse) {
+        @if not($important) {
+            #{$propriety}:#{$value};
+        }
+        @else {
+            #{$propriety}:#{$value} !important;
+        }
+    }
+    @else if ($reverse and not($variable)) and $value {
+        @if not($important) {
+            #{$propriety}:#{$value};
+        }
+        @else {
+            #{$propriety}:#{$value} !important;
+        }
+    }
+}
+
+///------ TYPE ------- VARIABLE ------------ EXAMPLE ------------- NOTES--------------
+/// @param {*}          $property       |   padding           - Property CSS
+/// @param {*}          $variable       |   $padding_top      - The variable you whant to verify before applly
+/// @param {*}          $value          |   $variable         - The value to apply if the verification of $variable return TRUE
+/// @param {*}          $reverse        |   false             - Give you possibility to reverse verification. So the propriety will be add only if the verification of $variable return FALSE
+/// @param {Boolean}    $important      |   false             - If you whant to use !important -- Is never recommanded, but some-time you can needed!
+/// @require {mixin} css3-prefix
+
+@mixin __ifuse-css3-prefix($propriety,$variable,$value:$variable,$reverse:false,$important:false) {
+
+    @if ($value and $variable) and not($reverse) {
+        @include css3-prefix($propriety, $value, $important);
+    }
+    @elseif ($reverse and not($variable)) and $value {
+        @include css3-prefix($propriety, $value, $important);
+    }
+}
+
+
+///------ TYPE ------- VARIABLE ------------ EXAMPLE ------------- NOTES--------------
+/// @param {*}          $selector       |   padding           - CSS Selector to extend
+/// @param {*}          $variable       |   $padding_top      - The variable you whant to verify before applly
+/// @param {*}          $reverse        |   false             - Give you possibility to reverse verification. So the propriety will be add only if the verification of $variable return FALSE
+
+@mixin __ifextend($selector,$variable:$selector,$reverse:false) {
+    @if ($selector and $variable) and not($reverse) {
+        @extend #{$selector};
+    }
+    @elseif ($reverse and not($variable)) and $selector {
+        @extend #{$selector};
+    }
+}

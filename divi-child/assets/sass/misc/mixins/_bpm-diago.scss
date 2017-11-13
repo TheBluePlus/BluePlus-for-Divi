@@ -1,0 +1,54 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-11-08, 14:51:46
+    Author     : karl_
+*/
+
+/// Make a section with diago before
+/// @param {Number} $angle [ex: 2] - Set the angle of the diago (in degree)
+/// @param {Size} $height [ex: 6vw] - Set the height of the diago
+/// @param {Color} $bg-color [ex: "#FFFFFF"] - Set the color of the diago -- and by default the background to the section
+/// @param {Boolean} $apply-on-section {DEFAULT: true} [ex: true] - If you wanth to set the background of the section at the same time...
+/// @param {Size} $top {DEFAULT: 0} [ex: 6vw] - Set where you want to place the diagonale, from the top (100% for place to the bottom of the section)
+/// @param {Value} $zindex-section {DEFAULT: 1} [ex: 50%] - Set the Z-INDEX value of the Section
+/// @param {Value} $zindex-diago {DEFAULT: -1} [ex: 6vw] - Set the Z-INDEX value of the Diagonale
+
+@mixin h-diago-before($angle,$height,$bg-color,$apply-on-section:true,$top:0,$translateY:-50%,$zindex-section:1,$zindex-diago:-1) {
+    z-index: $zindex-section;
+    @if $apply-on-section {background-color: $bg-color;}
+    
+    &::before {
+        position: absolute;
+        content: "";
+        top: $top;
+        left: -25%;
+        width: 150%;
+        z-index: $zindex-diago;
+        pointer-events: none;
+        height: $height;
+        @include transform("rotate(#{$angle}deg) translateY(#{$translateY})");
+        background-color: $bg-color;
+    }
+}
+
+@mixin h-diago-after($angle,$height,$bg-color,$apply-on-section:true,$top:100%,$translateY:50%,$zindex-section:1,$zindex-diago:-1) {
+    z-index: $zindex-section;
+    @if $apply-on-section {background-color: $bg-color;}
+    
+    &::before {
+        position: absolute;
+        content: "";
+        top: $top;
+        left: -25%;
+        width: 150%;
+        z-index: $zindex-diago;
+        pointer-events: none;
+        height: $height;
+        @include transform("rotate(#{$angle}deg) translateY(#{$translateY})");
+        background-color: $bg-color;
+    }
+}

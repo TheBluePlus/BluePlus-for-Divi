@@ -1,0 +1,104 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 19-Sep-2017, 9:07:59 AM
+    Author     : Gery
+*/
+/*.title1 {
+    font-family: $font_title;
+}*/
+
+/* h1 header*/
+.header-content h1 {
+    font-family: $font_title;
+    font-weight: 700;
+}
+/*h2 header*/
+.et_pb_fullwidth_header_0.et_pb_fullwidth_header .et_pb_fullwidth_header_subhead {
+    margin-top: 20px;
+    font-family: $font_title;
+    font-weight: 400;
+    width: 650px;
+    @media screen and (max-width: 980px) {
+        width: 350px;
+    }
+    @media screen and (max-width: 767px) {
+        width: 250px;
+    }
+}
+
+.title2 {
+    font-size: 2.5em;
+    line-height: 1.25em;
+    font-family: $font_title;
+    color: $themecolor_main;
+    font-weight: 400;
+    @media screen and (max-width: 980px) {
+        font-size: 2em;
+    }
+    @media screen and (max-width: 767px) {
+        font-size: 1.5em;
+    }
+
+}
+.title2-white {
+    color: $color_white;
+}
+.title3, .et_pb_blurb_container {
+    font-family: $font_title;
+    line-height: 1.25em;
+    color: $color_grey_fonce;
+    font-weight: 500;
+}
+.h3-myslider {
+    width: 550px;
+    margin-top: 15px;
+}
+.content {
+    font-family: $font;
+    color: $color_black;
+}
+.content-bold {
+     font-weight: 700;
+}
+.content-white {
+    color: $color_white;
+}
+.bottom-sable {
+    color: $themecolor_main;
+    font-family: $font_title;
+    font-weight: 700;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+.button-slider {
+    display: inline-block;   
+    padding: 10px 22px;
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-family: $font_title;
+}
+#main-footer {
+    background: $themecolor_main;
+}
+
+.content-footer {
+    font-family: $font;
+    color: $color_black;
+    font-size: 1.4em;
+}
+
+/*menu scroll plus visible*/
+/*#main-header {
+    &:not(.et-fixed-header) {
+        background-color: $color_menu_bar !important;
+    }
+    &.et-fixed-header {
+        background-color: $color_menu_bar_fixed !important;
+    }
+}*/

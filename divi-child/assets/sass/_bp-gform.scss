@@ -1,0 +1,109 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-09-04, 17:28:06
+    Author     : Karl
+*/
+
+/*
+/////////// STYLE POUR LE FORMULAIRE
+*/
+
+.inv-recaptcha-holder {
+    display: none;
+}
+
+.gform_wrapper .top_label .gfield_label, .gform_wrapper .gfield_date_day label, .gform_wrapper .ginput_complex label, .gform_heading
+{
+    color: #ffffff;
+}
+
+.gform_wrapper .top_label .gfield_label, .gform_wrapper .gfield_date_day label, .gform_wrapper .ginput_complex label, .gform_heading{
+    display: none !important;
+}
+
+li.gfield{
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.ginput_complex.ginput_container>span>input, .ginput_container>input{
+    margin: 0px !important;
+}
+
+.gform_button:hover, .gform_next_button:hover, .gform_previous_button:hover
+{
+    background-color:rgba(255,255,255,0.2) !important;
+    border: 0px solid !important;
+}
+
+.gform_wrapper .gform_footer
+{
+    text-align: center;
+}
+.gform_wrapper textarea.large {
+    height: 120px;
+}
+
+.gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']), .gform_wrapper textarea
+{
+    border-radius: 13px;
+    background-color: $color_white;
+    border: solid 3px $themecolor_main;
+    font-size: 16px;
+    font-family: $button_font;
+    text-transform: uppercase;
+    padding: 9px 24px;
+    color: darken($themecolor_main,30%) !important;
+    @include transition($transition);
+    
+    &:focus {
+        background-color: #FFFFFF !important;
+        border-color: $color_white !important;
+        color: darken($themecolor_main,20%) !important;
+    }
+}
+
+.gform_wrapper input.medium.datepicker {
+	width: 100%;
+}
+
+input.gform_button {
+    border-width: 0px !important;
+    border-radius: 5px;
+    letter-spacing: 0px;
+    font-size: 22px !important;
+    text-transform: uppercase;
+    font-family: $button_font;
+	padding: 9px 24px;
+	cursor:pointer;
+	@include transition($transition);
+    background: $color_white !important;
+    @if (lightness($color_white) > 50) {
+        color: $color_black;
+    }
+    @else {
+        color: $color_white;
+    }
+    
+}
+
+input.gform_button:hover {
+	opacity: .85;
+    border-width: 0px !important;
+    background: $themecolor_2 !important;
+    @if (lightness($themecolor_2) > 50) {
+        color: $color_black;
+    }
+    @else {
+        color: $color_white;
+    }
+}
+.gform_wrapper .field_description_below .gfield_description {
+   padding-top: 0;
+   padding-left: 10px;
+   font-size: 12px;
+}
